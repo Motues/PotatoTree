@@ -1,4 +1,4 @@
-# PatatoTree
+# PotatoTree
 
 本项目基于RoboMater比赛开发需求，构建一款可视化的智能决策工具，分为可视化应用和算法框架。
 
