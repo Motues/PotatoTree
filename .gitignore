@@ -1,0 +1,16 @@
+# VSCode
+.vscode/
+
+# Clion
+.idea/
+
+
+# Build
+[Bb]uild/
+
+# ROS
+ROSPackages
+.catkin_workspace
+
+# Doxygen
+Doxyfile
