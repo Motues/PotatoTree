@@ -1,0 +1,44 @@
+{
+  "tree" : {
+    "name": "root",
+    "id": 0,
+    "attribute" : {
+      "destinationID": 1,
+      "fireState": true
+    },
+    "children" : [
+      {
+        "name": "child1",
+        "id": 1,
+        "attribute" : {
+          "destinationID": 2,
+          "fireState": false
+        }
+      },
+      {
+        "name": "child2",
+        "id": 2,
+        "attribute" : {
+          "destinationID": 3,
+          "fireState": true
+        }
+      }
+    ],
+    "edges" : [
+      {
+        "target": 1,
+        "attribute" : {
+          "ammoLeft": 10,
+          "health": 100
+        }
+      },
+      {
+        "target": 2,
+        "attribute" : {
+          "ammoLeft": 20,
+          "health": 200
+        }
+      }
+    ]
+  }
+}

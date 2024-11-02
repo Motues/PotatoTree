@@ -1,0 +1,4 @@
+{
+  "NodeAttributes" : ["DestinationID", "FireState"],
+  "EdgeAttributes" : ["AmmoLeft", "Health"]
+}
