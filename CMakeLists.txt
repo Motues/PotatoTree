@@ -8,3 +8,14 @@ project(PotatoTree
         DESCRIPTION "Build Your Tree"
         HOMEPAGE_URL "https://github.com/Motues/PotatoTree"
 )
+
+OverrideGlobalCXXStandard(23)
+GuardGlobalBuildDirectory()
+DefineBuildSystemMacros()
+SuppressWindowsWarnings()
+
+AddModulesInDirectory(
+        DIRECTORY "Sources"
+        NAMES
+            "Test"
+)
