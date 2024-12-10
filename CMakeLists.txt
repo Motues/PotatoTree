@@ -11,8 +11,11 @@ project(PotatoTree
 
 OverrideGlobalCXXStandard(23)
 GuardGlobalBuildDirectory()
-DefineBuildSystemMacros()
-SuppressWindowsWarnings()
+# DefineBuildSystemMacros()
+# SuppressWindowsWarnings()
+
+find_package(behaviortree_cpp REQUIRED)
+# find_package(fmt REQUIRED)
 
 AddModulesInDirectory(
         DIRECTORY "Sources"

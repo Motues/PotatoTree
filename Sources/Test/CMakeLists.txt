@@ -7,4 +7,6 @@ AddCXXModule(
         HEADER_DIR Headers
         SOURCE_DIR Sources
         TESTER_DIR Testers
+	LINKS
+	    BT::behaviortree_cpp
 )

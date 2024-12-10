@@ -118,7 +118,7 @@ struct fire_code_type {
     std::uint8_t last_fire_status : 2 = 0; // 上次开火状态，状态翻转表示开火
     std::uint8_t friction_wheel : 2 = 0; // 摩擦轮状态
     std::uint8_t fire_rate : 2 = 0; // 发射频率
-    std::uint8_t maneuver : 2 = 0; // 不知道是啥
+    std::uint8_t maneuver : 2 = 0; // 人工操作
     void flip_fire_status() noexcept {
         last_fire_status = last_fire_status == 0b00 ? 0b11 : 0b00;
     }
@@ -141,7 +141,7 @@ using uwb_position = std::array<std::int16_t, 2>;
 
 struct game_code_type {
     std::uint16_t is_game_begin : 1 = 0; // 比赛开始状态
-    std::uint16_t is_hero_precaution : 1 = 0; //预测英雄，不知道是啥
+    std::uint16_t is_hero_precaution : 1 = 0; // 英雄预警信息
     std::uint16_t is_my_team_red : 1 = 0; // 队伍颜色
     std::uint16_t enemy_outpost_health : 6 = 0; // 敌方哨站血量
     std::uint16_t self_outpost_health : 6 = 0; // 己方哨站血量
