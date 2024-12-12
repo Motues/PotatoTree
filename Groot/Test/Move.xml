@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="Move">
+    <Sequence>
+      <Get_position Position="{Position}"/>
+      <Move_to_position Position="{Position}"/>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="Get_position"
+            editable="true">
+      <input_port name="Position"/>
+    </Action>
+    <Action ID="Move_to_position"
+            editable="true">
+      <input_port name="Position"/>
+    </Action>
+  </TreeNodesModel>
+
+</root>

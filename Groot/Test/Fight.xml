@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4">
+  <BehaviorTree ID="Fight">
+    <Sequence>
+      <Fallback>
+        <Condition_is_safe/>
+        <Go_home/>
+      </Fallback>
+      <Sequence>
+        <Fallback>
+          <Find_enemy/>
+          <Fallback>
+            <Know_last_position_of_enemy/>
+            <Fallback>
+              <Condition_is_safe/>
+              <Track_enemy/>
+            </Fallback>
+          </Fallback>
+          <Cruise_around/>
+        </Fallback>
+        <Sequence>
+          <Fallback>
+            <In_attack_range/>
+            <Fallback>
+              <Condition_is_safe/>
+              <Track_enemy/>
+            </Fallback>
+          </Fallback>
+          <Attack_enemy/>
+        </Sequence>
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="Attack_enemy"
+            editable="true"/>
+    <Condition ID="Condition_is_safe"
+               editable="true"/>
+    <Action ID="Cruise_around"
+            editable="true"/>
+    <Condition ID="Find_enemy"
+               editable="true"/>
+    <Action ID="Go_home"
+            editable="true"/>
+    <Condition ID="In_attack_range"
+               editable="true"/>
+    <Condition ID="Know_last_position_of_enemy"
+               editable="true"/>
+    <Action ID="Track_enemy"
+            editable="true"/>
+  </TreeNodesModel>
+
+</root>

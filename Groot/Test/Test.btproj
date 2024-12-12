@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4" project_name="Project">
+    <include path="Cruise.xml"/>
+    <include path="Fight.xml"/>
+    <include path="Move.xml"/>
+    <!-- Description of Node Models (used by Groot) -->
+    <TreeNodesModel>
+        <Action ID="Attack_enemy" editable="true"/>
+        <Condition ID="Condition_is_safe" editable="true"/>
+        <Action ID="Cruise_around" editable="true"/>
+        <Condition ID="Find_enemy" editable="true"/>
+        <Action ID="Get_position" editable="true">
+            <input_port name="Position"/>
+        </Action>
+        <Action ID="Go_home" editable="true"/>
+        <Condition ID="In_attack_range" editable="true"/>
+        <Condition ID="Know_last_position_of_enemy" editable="true"/>
+        <Action ID="Move_to_position" editable="true">
+            <input_port name="Position"/>
+        </Action>
+        <Action ID="Track_enemy" editable="true"/>
+    </TreeNodesModel>
+</root>
