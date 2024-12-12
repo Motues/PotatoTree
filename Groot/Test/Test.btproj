@@ -5,19 +5,19 @@
     <include path="Move.xml"/>
     <!-- Description of Node Models (used by Groot) -->
     <TreeNodesModel>
-        <Action ID="Attack_enemy" editable="true"/>
-        <Condition ID="Condition_is_safe" editable="true"/>
-        <Action ID="Cruise_around" editable="true"/>
-        <Condition ID="Find_enemy" editable="true"/>
-        <Action ID="Get_position" editable="true">
+        <Action ID="AttackEnemy" editable="true"/>
+        <Condition ID="ConditionIsSafe" editable="true"/>
+        <Action ID="CruiseAround" editable="true"/>
+        <Condition ID="EnemyInAttackRange" editable="true"/>
+        <Condition ID="FindEnemy" editable="true"/>
+        <Action ID="GetPosition" editable="true">
             <input_port name="Position"/>
         </Action>
-        <Action ID="Go_home" editable="true"/>
-        <Condition ID="In_attack_range" editable="true"/>
-        <Condition ID="Know_last_position_of_enemy" editable="true"/>
-        <Action ID="Move_to_position" editable="true">
+        <Action ID="GoHome" editable="true"/>
+        <Condition ID="KnowLastPositionOfEnemy" editable="true"/>
+        <Action ID="MoveToPosition" editable="true">
             <input_port name="Position"/>
         </Action>
-        <Action ID="Track_enemy" editable="true"/>
+        <Action ID="TrackEnemy" editable="true"/>
     </TreeNodesModel>
 </root>

@@ -3,30 +3,30 @@
   <BehaviorTree ID="Fight">
     <Sequence>
       <Fallback>
-        <Condition_is_safe/>
-        <Go_home/>
+        <ConditionIsSafe/>
+        <GoHome/>
       </Fallback>
       <Sequence>
         <Fallback>
-          <Find_enemy/>
+          <FindEnemy/>
           <Fallback>
-            <Know_last_position_of_enemy/>
+            <KnowLastPositionOfEnemy/>
             <Fallback>
-              <Condition_is_safe/>
-              <Track_enemy/>
+              <ConditionIsSafe/>
+              <TrackEnemy/>
             </Fallback>
           </Fallback>
-          <Cruise_around/>
+          <CruiseAround/>
         </Fallback>
         <Sequence>
           <Fallback>
-            <In_attack_range/>
+            <EnemyInAttackRange/>
             <Fallback>
-              <Condition_is_safe/>
-              <Track_enemy/>
+              <ConditionIsSafe/>
+              <TrackEnemy/>
             </Fallback>
           </Fallback>
-          <Attack_enemy/>
+          <AttackEnemy/>
         </Sequence>
       </Sequence>
     </Sequence>
@@ -34,21 +34,21 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Action ID="Attack_enemy"
+    <Action ID="AttackEnemy"
             editable="true"/>
-    <Condition ID="Condition_is_safe"
+    <Condition ID="ConditionIsSafe"
                editable="true"/>
-    <Action ID="Cruise_around"
+    <Action ID="CruiseAround"
             editable="true"/>
-    <Condition ID="Find_enemy"
+    <Condition ID="EnemyInAttackRange"
                editable="true"/>
-    <Action ID="Go_home"
+    <Condition ID="FindEnemy"
+               editable="true"/>
+    <Action ID="GoHome"
             editable="true"/>
-    <Condition ID="In_attack_range"
+    <Condition ID="KnowLastPositionOfEnemy"
                editable="true"/>
-    <Condition ID="Know_last_position_of_enemy"
-               editable="true"/>
-    <Action ID="Track_enemy"
+    <Action ID="TrackEnemy"
             editable="true"/>
   </TreeNodesModel>
 

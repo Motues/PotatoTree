@@ -3,7 +3,7 @@
   <BehaviorTree ID="Cruise">
     <Repeat num_cycles="10">
       <Sequence>
-        <Condition_is_safe/>
+        <ConditionIsSafe/>
         <SubTree ID="Move"/>
       </Sequence>
     </Repeat>
@@ -11,7 +11,7 @@
 
   <!-- Description of Node Models (used by Groot) -->
   <TreeNodesModel>
-    <Condition ID="Condition_is_safe"
+    <Condition ID="ConditionIsSafe"
                editable="true"/>
   </TreeNodesModel>
 
