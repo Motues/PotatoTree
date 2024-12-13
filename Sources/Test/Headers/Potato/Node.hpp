@@ -2,11 +2,12 @@
 
 #include "behaviortree_cpp/bt_factory.h"
 
-namespace Potato {
-
 using BT::NodeStatus;
+
+namespace Potato :: Action {
+
+
 using BT::SyncActionNode;
-using BT::ConditionNode;
 
 class AttackEnemy : public SyncActionNode {
 public:
@@ -48,6 +49,12 @@ public:
     }
 };
 
+}
+
+namespace Potato :: Condition {
+
+using BT::ConditionNode;
+
 class ConditionIsSafe : public ConditionNode {
 public:
     ConditionIsSafe(const std::string& name) :
@@ -87,6 +94,5 @@ public:
         return NodeStatus::SUCCESS;
     }
 };
-
 
 }
