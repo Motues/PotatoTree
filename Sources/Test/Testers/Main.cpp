@@ -24,9 +24,12 @@ int main() {
     // StdCoutLogger logger(tree);
     // Groot2Publisher logger(tree, 5555);
     // MinitraceLogger logger(tree, "../../Groot/Log/fight_log.json");
-    std::cout << "Starting tree tick...\n";
-    tree.tickWhileRunning();
-    std::cout << "Tree tick finished.\n";
-    logger.flush();
+    while(true) {
+        std::cout << "Starting tree tick...\n";
+        tree.tickWhileRunning();
+        std::cout << "Tree tick finished.\n";
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+    }
+    
     return 0;
 }

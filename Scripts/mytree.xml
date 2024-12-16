@@ -1,11 +1,8 @@
- <root BTCPP_format="4" >
-     <BehaviorTree ID="MainTree">
+<root BTCPP_format="4">
+    <BehaviorTree ID="MainTree">
         <Sequence name="root_sequence">
-            <CheckBattery   name="check_battery"/>
-            <OpenGripper    name="open_gripper"/>
-            <ApproachObject name="approach_object"/>
-            <CloseGripper   name="close_gripper"/>
+            <SimpleCondition/>
+            <SimpleAction/>
         </Sequence>
-     </BehaviorTree>
- </root>
-
+    </BehaviorTree>
+</root>

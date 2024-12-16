@@ -4,19 +4,22 @@
 
 namespace Potato {
 
+
+#define REGISTER_NODES(NodeName, NodeType) \
+    factory.registerNodeType<NodeType::NodeName>(#NodeName);
 void registerNodes(BT::BehaviorTreeFactory& factory){
     // Register your nodes here
     // Action Nodes
-    factory.registerNodeType<Action::AttackEnemy>("AttackEnemy");
-    factory.registerNodeType<Action::CruiseAround>("CruiseAround");
-    factory.registerNodeType<Action::GoHome>("GoHome");
-    factory.registerNodeType<Action::TrackEnemy>("TrackEnemy");
+    REGISTER_NODES(AttackEnemy, Action);
+    REGISTER_NODES(CruiseAround, Action);
+    REGISTER_NODES(GoHome, Action);
+    REGISTER_NODES(TrackEnemy, Action);
 
     // Condition Nodes
-    factory.registerNodeType<Condition::ConditionIsSafe>("ConditionIsSafe");
-    factory.registerNodeType<Condition::EnemyInAttackRange>("EnemyInAttackRange");
-    factory.registerNodeType<Condition::FindEnemy>("FindEnemy");
-    factory.registerNodeType<Condition::KnowLastPositionOfEnemy>("KnowLastPositionOfEnemy");
+    REGISTER_NODES(ConditionIsSafe, Condition);
+    REGISTER_NODES(EnemyInAttackRange, Condition);
+    REGISTER_NODES(FindEnemy, Condition);
+    REGISTER_NODES(KnowLastPositionOfEnemy, Condition);
 }
 
 }
